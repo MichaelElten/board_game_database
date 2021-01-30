@@ -10,6 +10,7 @@ bgg_data<-read_csv("./raw_data/bggdata.csv")
 bgg_data3<-bgg_data %>%
   filter(usersrated>200) %>%
   filter(owned>200)%>%
+  mutate(new_name=case_when(
     textcat(str_to_lower(name0))%in% c("english") ~ name0,
     textcat(str_to_lower(name1))%in% c("english") ~ name1,
     textcat(str_to_lower(name2))%in% c("english") ~ name2,

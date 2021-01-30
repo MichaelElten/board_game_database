@@ -8,10 +8,7 @@ library(googlesheets4)
 #Import data ----
 
 SS<-"https://docs.google.com/spreadsheets/d/1Y0Odg0ar_YsraYrcQ4r-oJJzSDpIK97SkLBv0yhRMWk/edit#gid=1796417297"
-
 data_import<-googlesheets4::read_sheet(SS, sheet = "full_dataset")
-
-
 
 ## Clean data ----
 
